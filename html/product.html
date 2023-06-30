@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannie Floral</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="icon" href="../media/shoppingCart.media/Hannie logo 2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/be2be59f23.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- -------header starts----------- -->
+    <header>
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="../index.html" class="logo">Hannie<span>Floral</span></a>
+        <nav class="navbar">
+            <a href="../index.html">home</a>
+            <a href="../index.html">about</a>
+            <a href="../index.html">events</a>
+            <a href="../index.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div><a href="#" class="fa-solid fa-heart" onclick="like()"></a></div>
+            <div class="cart">
+                <a href="../html/cart.html" class="fa-solid fa-cart-shopping" onclick="cart()"></a>
+                <span id="quantity">0</span>
+            </div>
+            <div>
+                <a href="../html/loginpage.html" id="userPic" class="fa-solid fa-user"></a>
+            </div>
+            <div class="user">
+                <span id="userName"></span> <br>
+                <span id="logout"></span>
+            </div>
+        </div>
+    </header>
+    <!-- ---------------header ends--------------- -->
+
+    <!-- ----------products section starts-------------->
+    <section class="products" id="products">
+        <h1 class="heading"> lastest <span>products</span> </h1>
+        <ul id="myUl">
+            <li><button class="btn-floral" id="all" onclick="allType()">All</button></li>
+            <li><button class="btn-floral" id="rose" onclick="typeRose('rose')">Rose</button></li>
+            <li><button class="btn-floral" id="lily" onclick="typeLily('lily')">Lily</button></li>
+            <li><button class="btn-floral" id="poeny" onclick="typePoeny('poeny')">Poeny</button></li>
+            <li><button class="btn-floral" id="tulip" onclick="typeTulip('tulip')">Tulip</button></li>
+            <li><button class="btn-floral" id="lavender" onclick="typeLavender('lavender')">Lavender</button></li>
+            <li><button class="btn-floral" id="marigold" onclick="typeMarigold('marigold')">Marigold</button></li>
+            <li><button class="btn-floral" id="daisy" onclick="typeDaisy('daisy')">Daisy</button></li>
+            <li><button class="btn-floral" id="sunflower" onclick="typeSunflower('sunflower')">Sunflower</button></li>
+            <li><button class="btn-floral" id="dahlia" onclick="typeDahlia('dahlia')">Dahlia</button></li>
+            <li><button class="btn-floral" id="other" onclick="typeOther('other')">Other</button></li>
+        </ul>
+        <div class="box-container">
+            <div class="product">
+                <!-- <div class="box" id="1">
+                    <div class="image">
+                        <img src="./cart.media/pic1.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>pink poeny pot</h3>
+                        <div class="price"> $17.99</div>
+                    </div>
+                </div>
+                <div class="box" id="2">
+                    <div class="image">
+                        <img src="./cart.media/pic2.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>pink rose</h3>
+                        <div class="price"> $15.99</div>
+                    </div>
+                </div>
+                <div class="box" id="3">
+                    <div class="image">
+                        <img src="./cart.media/pic3.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>white tulip</h3>
+                        <div class="price"> $22.99</div>
+                    </div>
+                </div>
+                <div class="box" id="4">
+                    <div class="image">
+                        <img src="./cart.media/pic4.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>poeny</h3>
+                        <div class="price"> $15.99</div>
+                    </div>
+                </div>
+                <div class="box" id="5">
+                    <div class="image">
+                        <img src="./cart.media/pic5.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>white tulip</h3>
+                        <div class="price"> $16.99</div>
+                    </div>
+                </div>
+                <div class="box" id="6">
+                    <div class="image">
+                        <img src="./cart.media/pic6.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>poeny bouquet</h3>
+                        <div class="price"> $25.99</div>
+                    </div>
+                </div>
+                <div class="box" id="7">
+                    <div class="image">
+                        <img src="./cart.media/pic7.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>poeny</h3>
+                        <div class="price"> $19.99</div>
+                    </div>
+                </div>
+                <div class="box" id="8">
+                    <div class="image">
+                        <img src="./cart.media/pic8.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>small bouquet</h3>
+                        <div class="price"> $13.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="9">
+                    <div class="image">
+                        <img src="./cart.media/pic9.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>flower pot</h3>
+                        <div class="price"> $24.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="10">
+                    <div class="image">
+                        <img src="./cart.media/pic10.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Malus Cardinal</h3>
+                        <div class="price"> $20.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="11">
+                    <div class="image">
+                        <img src="./cart.media/pic11.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>corn flower</h3>
+                        <div class="price"> $12.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="12">
+                    <div class="image">
+                        <img src="./cart.media/pic12.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>lavender pot</h3>
+                        <div class="price"> $22.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="13">
+                    <div class="image">
+                        <img src="./cart.media/pic13.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Marigold</h3>
+                        <div class="price"> $15.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="14">
+                    <div class="image">
+                        <img src="./cart.media/pic14.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>tulip</h3>
+                        <div class="price"> $23.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="15">
+                    <div class="image">
+                        <img src="./cart.media/pic15.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>red rose</h3>
+                        <div class="price"> $19.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="16">
+                    <div class="image">
+                        <img src="./cart.media/pic16.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>colorful daisy</h3>
+                        <div class="price"> $18.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="17">
+                    <div class="image">
+                        <img src="./cart.media/pic17.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Camellia</h3>
+                        <div class="price"> $21.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="18">
+                    <div class="image">
+                        <img src="./cart.media/pic18.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Day-lity</h3>
+                        <div class="price"> $20.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="19">
+                    <div class="image">
+                        <img src="./cart.media/pic19.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Pink poeny</h3>
+                        <div class="price"> $23.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="20">
+                    <div class="image">
+                        <img src="./cart.media/pic20.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Sunflower</h3>
+                        <div class="price"> $22.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="21">
+                    <div class="image">
+                        <img src="./cart.media/pic21.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Pansy</h3>
+                        <div class="price"> $24.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="22">
+                    <div class="image">
+                        <img src="./cart.media/pic22.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Honeysuckle</h3>
+                        <div class="price"> $20.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="23">
+                    <div class="image">
+                        <img src="./cart.media/pic23.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Peony bouquet</h3>
+                        <div class="price"> $25.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="24">
+                    <div class="image">
+                        <img src="./cart.media/pic24.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Poeny bouquet</h3>
+                        <div class="price"> $25.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="25">
+                    <div class="image">
+                        <img src="./cart.media/pic25.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Rose round bouquet</h3>
+                        <div class="price"> $29.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="26">
+                    <div class="image">
+                        <img src="./cart.media/pic26.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Chrysanthemum</h3>
+                        <div class="price"> $22.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="27">
+                    <div class="image">
+                        <img src="./cart.media/pic27.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Sandy rose bouquet</h3>
+                        <div class="price"> $23.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="28">
+                    <div class="image">
+                        <img src="./cart.media/pic28.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Rosy poeny</h3>
+                        <div class="price"> $22.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="29">
+                    <div class="image">
+                        <img src="./cart.media/pic29.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Green rose bouquet</h3>
+                        <div class="price"> $27.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="30">
+                    <div class="image">
+                        <img src="./cart.media/pic30.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Rose</h3>
+                        <div class="price"> $18.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="31">
+                    <div class="image">
+                        <img src="./cart.media/pic31.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Delphis flower</h3>
+                        <div class="price"> $16.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="32">
+                    <div class="image">
+                        <img src="./cart.media/pic32.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Big rose bouquet</h3>
+                        <div class="price"> $28.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="33">
+                    <div class="image">
+                        <img src="./cart.media/pic33.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Handy rose bouquet</h3>
+                        <div class="price"> $18.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="34">
+                    <div class="image">
+                        <img src="./cart.media/pic34.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Pink tulip</h3>
+                        <div class="price"> $25.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="35">
+                    <div class="image">
+                        <img src="./cart.media/pic35.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Hyacinth</h3>
+                        <div class="price"> $19.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="36">
+                    <div class="image">
+                        <img src="./cart.media/pic36.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Gerbera bouquet</h3>
+                        <div class="price"> $19.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="37">
+                    <div class="image">
+                        <img src="./cart.media/pic37.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Rose pot</h3>
+                        <div class="price"> $24.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="38">
+                    <div class="image">
+                        <img src="./cart.media/pic38.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Lisianthus bouquet</h3>
+                        <div class="price"> $21.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="39">
+                    <div class="image">
+                        <img src="./cart.media/pic39.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Water lily bouquet</h3>
+                        <div class="price"> $20.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="40">
+                    <div class="image">
+                        <img src="./cart.media/pic40.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Dahlia bouquet</h3>
+                        <div class="price"> $23.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="41">
+                    <div class="image">
+                        <img src="./cart.media/pic41.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Big Rose Bouquet</h3>
+                        <div class="price"> $29.99</div>
+                    </div>
+                </div>
+
+                <div class="box" id="42">
+                    <div class="image">
+                        <img src="./cart.media/pic42.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn" onclick="addToCart()">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Heliconia Firebird</h3>
+                        <div class="price"> $22.99</div>
+                    </div>
+                </div>
+ -->
+            </div>
+
+            <ul class="listPage"> </ul>
+        </div>
+    </section>
+    <!--------------products section ends------------->
+
+    <!--------------footer section starts------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="../index.html">home</a>
+                <a href="../index.html">about</a>
+                <a href="../index.html">products</a>
+                <a href="../index.html">review</a>
+                <a href="../index.html">contact</a>
+            </div>
+            <div class="box-media">.
+                <h3>social medias</h3>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">Vietnam</a>
+                <a href="#">Japan</a>
+                <a href="#">USA</a>
+                <a href="#">Italy</a>
+                <a href="#">France</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+0123-456-789</a>
+                <a href="#">floral@hannie.com</a>
+                <a href="#">Hanoi, Vietnam - 1001000</a>
+                <img src="../media/shoppingCart.media/payments.png">
+            </div>
+        </div>
+
+        <div class="credit">by <span> Hannie <Hanh><i class="fa-solid fa-heart"></i> Hanh </span> | all rights
+            reserved |
+        </div>
+
+    </section>
+
+    <!--------------footer section ends------------->
+
+
+    <script src="../js/product.js"></script>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        let statusLogin = localStorage.getItem("flagSignIn");
+        let userCart = cart[statusLogin];
+
+        if (statusLogin != null) {
+            document.getElementById("userName").innerHTML = `Hi, ${statusLogin}! <i class="fa-solid fa-heart"></i>`;
+            document.getElementById("logout").innerHTML = `<button onclick="logout()">Log out</button>`;
+            document.getElementById("userPic").style.display = "none";
+            document.getElementById("quantity").innerHTML = userCart.length;
+        }
+
+        function logout() {
+            localStorage.removeItem("flagSignIn");
+            document.getElementById("quantity").innerHTML = 0;
+            document.getElementById("userName").innerHTML = "";
+            document.getElementById("logout").innerHTML = "";
+            document.getElementById("userPic").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

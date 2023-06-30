@@ -1,0 +1,372 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Handlee', cursive;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 0.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 4rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar a {
+    font-size: 3rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+}
+
+header .icons a {
+    font-size: 3rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+/* ---------acc page starts---------- */
+.account-page{
+    min-height: 100vh;
+    padding: 5rem 0;
+    background: url(../media/loginpage.media/Flower\ Bkg\ Thanks.png);
+    background-repeat: no-repeat;
+}
+.form-container{
+    background: rgb(242, 209, 213);
+    width: 35rem;
+    height: 50rem;
+    position: relative;
+    text-align: center;
+    border-radius: 2rem;
+    padding: 3rem 0;
+    margin: 10rem auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;    overflow: hidden;
+}
+.form-container #LoginForm input, .form-container #RegForm input{
+    font-family: 'Times New Roman', Times, serif !important;
+    text-transform: none !important;
+
+}
+.form-container .form-btn span{
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--pink);
+    padding: 0 1rem;
+    cursor: pointer;
+    width: 10rem;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    padding: 0 2rem;
+    position: absolute;
+    top: 10rem;
+    transition: transform 0.5s;
+}
+form label {
+    font-size: 2rem;
+}
+form .inputbox .input-field{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+form .inputbox .input-field #eyeIcon, form .inputbox .input-field #eyeIcon1, form .inputbox .input-field #eyeIcon2, form .inputbox .input-field #eyeIcon3 {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 1rem;
+}
+form .inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+input:focus ~ label, input:valid ~ label{
+    top: -5px;
+}
+
+form .inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+form .inputbox .error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 1rem;
+    display: none;
+}
+form .inputbox .error-icon{
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+form .create-password .error{
+    align-items: flex-start;
+}
+/* .invalid .error{
+    display: flex;
+} */
+
+
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -50rem;
+}
+#RegForm{
+    left: 0;
+    height: auto;
+}
+
+form a{
+    font-size: 1.4rem;
+    margin-top: 3rem 0;
+    color: #fff;
+}
+form a:hover{
+    color: #e84393;
+}
+#Indicator{
+    width: 10rem;
+    border: none;
+    background: var(--pink);
+    height: .3rem;
+    margin-top: .8rem;
+    transform: translateX(10rem);
+    transition: transform 0.5s;
+}
+button {
+    width: 2rem;
+    height: 40px;
+    border-radius: 40px;
+    background: rgba(243, 154, 169, 0.801);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.7em;
+    font-weight: 600;
+    transition: 0.5s;
+    color: #fff;
+}
+button:hover{
+    background: #e84393;
+}
+
+
+
+/* ---------footer------------ */
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+.footer .box-container .box-media{
+    flex: 1 1 25rem;
+
+}
+.footer .box-container .box-media h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box-media a{
+    margin: 0.5rem 1rem;
+    display: inline-block;
+    color: #333;
+    font-size: 2.3rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box-media a:hover{
+    color: var(--pink);
+}
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    color: #333;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+}
+.footer .box-container .box img{
+    margin-top: 1rem;
+    width: 20rem;
+    height: 5rem;
+}
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #333;
+    border-top: 0.1 solid rgba(0, 0, 0, 0.1);
+}
+.footer .credit span{
+    color: var(--pink);
+}
+
+.snackbar {
+    position: fixed;
+    top: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+    .form-container {
+        width: 40rem;
+    }
+}
+
+@media (max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+    .form-container {
+        width: 43rem;
+        height: 60rem;
+    }
+
+}

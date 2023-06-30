@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannie Floral Login page</title>
+    <link rel="stylesheet" href="../css/loginpage.css">
+    <link rel="icon" href="../media/loginpage.media/Hannie logo 2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/be2be59f23.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- -------header starts----------- -->
+    <header>
+        <!-- <input type="checkbox" id="toggler"> -->
+        <!-- <label for="toggler" class="fas fa-bars"></label> -->
+        <a href="../index.html" class="logo">Hannie<span>Floral</span></a>
+    </header>
+    <!-- ---------------------------------header ends---------------------------------- -->
+
+
+    <!---------------------------------account page starts-------------------------------->
+    <div class="account-page">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="Indicator">
+                </div>
+                <!-- --------------------------------------login form---------------------------------- -->
+                <form id="LoginForm">
+                    <div class="inputbox email-field">
+                        <div class="input-field ">
+                            <i id="eyeIcon" class="fa-solid fa-envelope"></i>
+                            <input type="text" class="email" id="email1" required>
+                            <label>Email</label>
+                        </div>
+                        <span class="error email-error" id="emailValid1">
+                            <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+                            <p>Please enter a valid email.</p>
+                        </span>
+                    </div>
+                    <!-- -------------------------------------login pass--------------------------------- -->
+                    <div class="inputbox create-password">
+                        <div class="input-field">
+                            <i id="eyeIcon1" name="pass" class="fa-regular fa-eye-slash eyeIcon"></i>
+                            <input type="password" class="password" id="pass" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <span class="error password-error" id="passValid1">
+                            <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+                            <p>Please enter at least 8 characters with number, <br> small & capital letter.
+                            </p>
+                        </span>
+                    </div>
+                    <button type="button" onclick="signIn()" class="btn">Login</button>
+                    <a href="#">Forgot password?</a>
+                </form>
+                <!-- ---------------------------------register form---------------------------------------------->
+                <form id="RegForm">
+                    <div class="inputbox email-field">
+                        <div class="input-field ">
+                            <i id="eyeIcon" class="fa-solid fa-envelope"></i>
+                            <input type="text" class="email" id="email2" required>
+                            <label>Email</label>
+                        </div>
+                        <span class="error email-error" id="emailValid2">
+                            <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+                            <p>Please enter a valid email.</p>
+                        </span>
+                    </div>
+                    <!-- ------------------------------create new password------------------------------------------------->
+                    <div class="inputbox create-password">
+                        <div class="input-field">
+                            <i id="eyeIcon2" name="createPass" class="fa-regular fa-eye-slash eyeIcon"></i>
+                            <input type="password" class="password" id="createPass" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <span class="error password-error" id="passValid2">
+                            <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+                            <p>Please enter at least 8 characters with number, <br> small & capital letter.
+                            </p>
+                        </span>
+                    </div>
+                    <!-- --------------------------------------confirm password--------------------------------------------- -->
+                    <div class="inputbox confirm-password">
+                        <div class="input-field ">
+                            <i id="eyeIcon3" name="confirmPass" class="fa-regular fa-eye-slash eyeIcon"></i>
+                            <input type="password" class="password cPassword" id="confirmPass" required>
+                            <label for="password">Confirm password</label>
+                        </div>
+                        <span class="error password-error" id="cPassValid">
+                            <i class="fa-solid fa-triangle-exclamation error-icon"></i>
+                            <p>Password don't match. Please try again!</p>
+                        </span>
+                    </div>
+
+                    <button type="submit" class="btn" id="registerBtn">Register</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <!------------------------------------account page ends----------------------------------------->
+
+
+    <!-----------------------------------footer section starts-------------------------------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="../index.html">home</a>
+                <a href="../index.html">about</a>
+                <a href="../html/product.html">products</a>
+                <a href="../index.html">review</a>
+                <a href="../index.html">contact</a>
+            </div>
+            <div class="box-media">
+                <h3>social medias</h3>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">Vietnam</a>
+                <a href="#">Japan</a>
+                <a href="#">USA</a>
+                <a href="#">Italy</a>
+                <a href="#">France</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+0123-456-789</a>
+                <a href="#">floral@hannie.com</a>
+                <a href="#">Hanoi, Vietnam - 11000</a>
+                <img src="../media/loginpage.media/payments.png">
+            </div>
+        </div>
+
+        <div class="credit"> By <span> Hannie <Hanh><i class="fa-solid fa-heart"></i> Hanh </span> | all rights
+            reserved |
+        </div>
+
+    </section>
+
+    <!--------------footer section ends------------->
+
+
+    <!-----------------JS for acc form--------------->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(10rem)";
+
+        }
+        function login() {
+            RegForm.style.transform = "translateX(50rem)";
+            LoginForm.style.transform = "translateX(50rem)";
+            Indicator.style.transform = "translateX(0px)";
+
+        }
+    </script>
+
+
+
+    <script src="../js/loginpage.js"></script>
+</body>
+
+</html>

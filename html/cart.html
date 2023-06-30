@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannie Floral</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="icon" href="../media/cart.media/Hannie logo 2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/be2be59f23.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ------------header starts----------- -->
+    <header>
+        <a href="../index.html" class="logo">Hannie<span>Floral</span></a>
+        <div class="cartTitle">
+            <h2>Your shopping cart</h2>
+        </div>
+
+        <div class="icons">
+            <div><a href="#" class="fa-solid fa-heart" onclick="like()"></a></div>
+            <div class="cart">
+                <a href="./cart.html" class="fa-solid fa-cart-shopping" onclick="cart()"></a>
+                <span id="quantity">0</span>
+            </div>
+            <div><a href="./loginpage.html" id="userPic" class="fa-solid fa-user"></a></div>
+            <div class="user">
+                <span id="userName"></span> <br>
+                <span id="logout"></span>
+            </div>
+
+        </div>
+
+
+    </header>
+    <!-- ---------------header ends--------------- -->
+    <section class="cartList">
+        <div class="main">
+            <div class="table">
+                <table id="table">
+
+                </table>
+            </div>
+            <div class="checkOut">
+                <div>total: $<span id="total">0</span></div>
+                <button class="payment" id="payment" onclick="pay()">Pay Now</button>
+                <button class="closeShopping"><a href="./product.html"> Back <i
+                            class="fa-solid fa-rotate-left"></i></a></button>
+            </div>
+            <!-- ---------modal----------- -->
+            <div id="myModal" class="modal">
+                <span class="close" id="close">X</span>
+                <img src="../media/cart.media/thanks_pic.png" class="modal-content" id="img01">
+            </div>
+            <script>
+                function pay() {
+                    let cart = JSON.parse(localStorage.getItem("cart"));
+                    let statusLogin = localStorage.getItem("flagSignIn");
+                    let userCart = cart[statusLogin];
+                    if (statusLogin) {
+                        if (userCart.length != 0) {
+                            document.getElementById("myModal").style.display = "block";
+                            let close = document.getElementById("close")
+                            close.addEventListener("click", () => {
+                                document.getElementById("myModal").style.display = "none";
+
+                                cart = { ...cart, [statusLogin]: [] }
+                                localStorage.setItem("cart", JSON.stringify(cart));
+                                location.reload()
+                            })
+
+                        } else {
+                            const snackbar = document.createElement("div");
+                            snackbar.classList.add("snackbar");
+                            snackbar.innerText = "No product in your cart!";
+                            document.body.appendChild(snackbar);
+
+                            setTimeout(() => {
+                                snackbar.remove();
+                            }, 3000);
+                        }
+                    } else {
+                        const snackbar = document.createElement("div");
+                        snackbar.classList.add("snackbar");
+                        snackbar.innerText = "Please login!";
+                        document.body.appendChild(snackbar);
+
+                        setTimeout(() => {
+                            snackbar.remove();
+                        }, 3000);
+                    }
+                }
+
+            </script>
+        </div>
+    </section>
+
+
+
+
+    <!--------------footer section starts------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="../index.html">home</a>
+                <a href="#about">about</a>
+                <a href="./product.html">products</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+            </div>
+            <div class="box-media">
+                <h3>social medias</h3>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">Vietnam</a>
+                <a href="#">Japan</a>
+                <a href="#">USA</a>
+                <a href="#">Italy</a>
+                <a href="#">France</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+0123-456-789</a>
+                <a href="#">floral@hannie.com</a>
+                <a href="#">Hanoi, Vietnam - 1001000</a>
+                <img src="../media/shoppingCart.media/payments.png">
+            </div>
+        </div>
+
+        <div class="credit">by <span> Hannie <i class="fa-solid fa-heart"></i> Hanh </span> | all rights
+            reserved |
+        </div>
+
+    </section>
+
+    <!--------------footer section ends------------->
+
+    <script src="../js/cart.js"></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        let statusLogin = localStorage.getItem("flagSignIn");
+        let userCart = cart[statusLogin];
+        if (statusLogin != null) {
+            document.getElementById("userName").innerHTML = `Hi, ${statusLogin}! <i class="fa-solid fa-heart"></i>`;
+            document.getElementById("logout").innerHTML = `<button onclick="logout()">Log out</button>`;
+            document.getElementById("userPic").style.display = "none";
+            document.getElementById("quantity").innerHTML = userCart.length;
+        }
+
+        function logout() {
+            localStorage.removeItem("flagSignIn");
+            location.href = "../index.html";
+            document.getElementById("quantity").innerHTML = 0;
+            document.getElementById("userName").innerHTML = "";
+            document.getElementById("logout").innerHTML = "";
+            document.getElementById("userPic").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

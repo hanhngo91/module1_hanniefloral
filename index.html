@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannie Floral</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home-style.css">
+    <link rel="icon" href="./media/home-media/Hannie logo 2.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/be2be59f23.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- -------header starts----------- -->
+    <header>
+        <input type="checkbox" id="toggler" />
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#home" class="logo">Hannie<span>Floral</span></a>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#events">events</a>
+            <!-- <a href="#review">review</a> -->
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fa-solid fa-heart"></a>
+            <div class="cart">
+                <a href="../html/cart.html" class="fa-solid fa-cart-shopping"></a>
+                <span id="quantity">0</span>
+            </div>
+            <a href="./html/loginpage.html" id="userPic" class="fa-solid fa-user"></a>
+            <div class="user">
+                <span id="userName"></span> <br>
+                <span id="logout"></span>
+            </div>
+        </div>
+
+
+    </header>
+    <!-- ---------------header ends--------------- -->
+
+
+    <!-- ----------home section starts----------- -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>fresh flowers daily</h3>
+            <span> natural & beautiful flowers</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores optio, illo distinctio,
+                fuga eos quibusdam magnam id voluptates aliquid tempore ea sequi quidem! Ea praesentium nulla sequi
+                assumenda autem molestias.</p>
+            <a href="./html/product.html" class="btn">shop now</a>
+        </div>
+    </section>
+    <!-- ------------hone section ends---------- -->
+
+
+    <!-- ------------about section starts-------- -->
+    <section class="about" id="about">
+        <h1 class="heading">about <span>us</span></h1>
+        <div class="row">
+            <div class="video-container">
+                <video src="./media/home-media/video_1.mp4" loop autoplay muted></video>
+                <h3>best flower sellers</h3>
+            </div>
+            <div class="content">
+                <h3>why choose us?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta aspernatur quae libero natus ipsa
+                    explicabo provident a blanditiis asperiores unde esse, alias sit reiciendis neque molestiae fugiat.
+                    Veniam, tempore corporis?
+                    Facilis qui reiciendis temporibus, similique alias atque blanditiis cumque eligendi eum veniam sunt
+                    repudiandae minus et soluta ullam consequuntur omnis excepturi provident aperiam magnam. Adipisci
+                    similique recusandae totam dolor provident?
+                    Voluptatibus quisquam, sequi, sint, consequatur similique dolor voluptatum ab reiciendis aliquam
+                    repellendus a eum. Reiciendis odit obcaecati voluptatum nostrum! At minima explicabo voluptas enim
+                    assumenda atque odio numquam quam?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse ab corporis, laboriosam odio ex
+                    iste veniam. Praesentium accusamus aut sequi dolor nulla. Perferendis vitae quo, est delectus totam
+                    officiis?
+                    Id et totam eligendi quod, soluta praesentium aspernatur voluptatibus voluptates sequi enim
+                    inventore, minus assumenda ipsam delectus quo, reprehenderit architecto quidem possimus. Eius, et
+                    illum dolores ipsa voluptas corrupti incidunt!</p>
+            </div>
+        </div>
+    </section>
+    <!-- ------------about section ends------------>
+
+
+    <!-- ----------icons section starts----------- -->
+    <section class="icons-container">
+        <div class="icons">
+            <img src="./media/home-media/icon1.png" alt="">
+            <div class="info">
+                <h3>free delivery</h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="./media/home-media/icon2.png" alt="">
+            <div class="info">
+                <h3>3 days returns</h3>
+                <span>moneyback guarantee</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="./media/home-media/icon3.png" alt="">
+            <div class="info">
+                <h3>offer & gifts</h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+        <div class="icons">
+            <img src="./media/home-media/icon4.png" alt="">
+            <div class="info">
+                <h3>secure payment</h3>
+                <span>protect by paypal</span>
+            </div>
+        </div>
+    </section>
+    <!-- ----------icons section ends----------------->
+
+    <!-- ----------events section starts-------------->
+    <section class="events" id="events">
+        <h1 class="heading"> our <span>events</span> </h1>
+
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="./media/home-media/pic1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic3.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic4.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic5.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic6.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic7.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic8.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic9.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic10.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic11.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic12.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./media/home-media/pic13.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--------------events section ends------------->
+
+    <!--------------review section starts------------>
+    <section class="review" id="review">
+        <h1 class="heading"> customer's <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Autem error reiciendis non aut consequuntur quia delectus facilis illum aliquam, nihil vitae!
+                    Molestiae autem corrupti quidem ea distinctio aliquid reiciendis voluptate.</p>
+                <div class="user">
+                    <img src="./media/home-media/pic_1.png" alt="">
+                    <div class="user-info">
+                        <h3>John Sheran</h3>
+                        <span>happy customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Autem error reiciendis non aut consequuntur quia delectus facilis illum aliquam, nihil vitae!
+                    Molestiae autem corrupti quidem ea distinctio aliquid reiciendis voluptate.</p>
+                <div class="user">
+                    <img src="./media/home-media/pic_2.png" alt="">
+                    <div class="user-info">
+                        <h3>Laurie Montana</h3>
+                        <span>happy customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Autem error reiciendis non aut consequuntur quia delectus facilis illum aliquam, nihil vitae!
+                    Molestiae autem corrupti quidem ea distinctio aliquid reiciendis voluptate.</p>
+                <div class="user">
+                    <img src="./media/home-media/pic_3.png" alt="">
+                    <div class="user-info">
+                        <h3>Samuel King </h3>
+                        <span>happy customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+        </div>
+    </section>
+
+    <!--------------review section ends------------->
+
+    <!--------------contact section starts------------->
+    <section class="contact" id="contact">
+        <h1 class="heading">contact <span>us</span></h1>
+        <div class="row">
+            <form id="form" name="submit-to-google-sheet">
+                <input type="text" placeholder="name" class="box" name="name">
+                <input type="email" placeholder="email" class="box" name="email">
+                <input type="number" placeholder="number" class="box" name="phonenumber">
+                <textarea class="box" cols="30" rows="10" placeholder="message" name="message"></textarea>
+                <input type="submit" value="send message" class="btn">
+                <span id="msg"></span>
+            </form>
+            <div class="image">
+                <img src="./media/home-media/footer_pic.png" alt="">
+            </div>
+        </div>
+
+    </section>
+    <!-- -----------------google sheet form----------------------- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRdp2vonEFMiYGCZVyA7bHNqS-nwIoxZGEupLsWkKLxjTszSrel1onSbeEFjboUpDLww/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg");
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!";
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 3000)
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <!--------------contact section ends------------->
+
+
+    <!--------------footer section starts------------->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#events">events</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+            </div>
+            <div class="box-media">
+                <h3>social medias</h3>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">Vietnam</a>
+                <a href="#">Japan</a>
+                <a href="#">USA</a>
+                <a href="#">Italy</a>
+                <a href="#">France</a>
+            </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">+0123-456-789</a>
+                <a href="#">floral@hannie.com</a>
+                <a href="#">Hanoi, Vietnam - 1001000</a>
+                <img src="./media/home-media/payments.png">
+            </div>
+        </div>
+
+        <div class="credit"> by <span> Hannie <i class="fa-solid fa-heart"></i> Hanh </span> | all rights
+            reserved |
+        </div>
+
+    </section>
+
+    <!--------------footer section ends------------->
+    <script src="./js/loginpage.js"></script>
+
+    <script>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+
+    <script>
+
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        let statusLogin = localStorage.getItem("flagSignIn");
+        let userCart = cart[statusLogin];
+        if (statusLogin != null) {
+            document.getElementById("userName").innerHTML = `Hi, ${statusLogin}! <i class="fa-solid fa-heart"></i>`;
+            document.getElementById("logout").innerHTML = `<button onclick="logout()">Log out</button>`;
+            document.getElementById("userPic").style.display = "none";
+            document.getElementById("quantity").innerHTML = userCart.length;
+        }
+
+        function logout() {
+            localStorage.removeItem("flagSignIn");
+            document.getElementById("quantity").innerHTML = 0;
+            document.getElementById("userName").innerHTML = "";
+            document.getElementById("logout").innerHTML = "";
+            document.getElementById("userPic").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
